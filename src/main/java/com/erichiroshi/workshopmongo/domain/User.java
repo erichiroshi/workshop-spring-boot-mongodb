@@ -11,10 +11,11 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Getter
-@EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @NoArgsConstructor
 @AllArgsConstructor
+@Getter
+@Setter
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @Document(collection = "user")
 public class User implements Serializable {
 	private static final long serialVersionUID = 1L;
@@ -23,9 +24,7 @@ public class User implements Serializable {
 	@Id
 	private String id;
 
-	@Setter
 	private String name;
-	@Setter
 	private String email;
 
 }
