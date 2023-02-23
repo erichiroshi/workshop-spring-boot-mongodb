@@ -1,5 +1,6 @@
 package com.erichiroshi.workshopmongo.services;
 
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,6 +35,11 @@ public class PostService {
 	public void delete(String id) {
 		findById(id);
 		repository.deleteById(id);
+	}
+	
+	public List<Post> fullSearch(String text, Date minDate, Date maxDate) {
+		maxDate = new Date(maxDate.getTime() + 24 * 60 * 60 * 1000);
+		return repository.fullSearch(text, minDate, maxDate);
 	}
 
 }
