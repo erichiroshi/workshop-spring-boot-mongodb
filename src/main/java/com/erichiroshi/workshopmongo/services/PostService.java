@@ -23,6 +23,10 @@ public class PostService {
 		return repository.findById(id).orElseThrow(() -> new ObjectNotFoundException(id));
 	}
 
+	public List<Post> findByTitle(String text) {
+		return repository.findByTitleContainingIgnoreCase(text);
+	}
+
 	public Post insert(Post post) {
 		return repository.save(post);
 	}
