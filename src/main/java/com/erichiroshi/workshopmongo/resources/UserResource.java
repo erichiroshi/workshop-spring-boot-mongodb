@@ -17,7 +17,7 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.erichiroshi.workshopmongo.domain.Post;
 import com.erichiroshi.workshopmongo.domain.User;
-import com.erichiroshi.workshopmongo.domain.dto.UserDTO;
+import com.erichiroshi.workshopmongo.dto.UserDTO;
 import com.erichiroshi.workshopmongo.services.UserService;
 
 @RestController

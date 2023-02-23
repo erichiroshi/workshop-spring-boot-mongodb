@@ -1,4 +1,4 @@
-package com.erichiroshi.workshopmongo.config;
+package com.erichiroshi.workshopmongo.dto;
 
 import java.io.Serializable;
 
@@ -11,15 +11,16 @@ import lombok.Setter;
 @NoArgsConstructor
 @Getter
 @Setter
-public class AuthorDTO implements Serializable {
+public class UserDTO implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	private String id;
 	private String name;
+	private String email;
 
-	public AuthorDTO(User obj) {
-		this.id = obj.getId();
-		this.name = obj.getName();
+	public UserDTO(User user) {
+		this.id = user.getId();
+		this.name = user.getName();
+		this.email = user.getEmail();
 	}
-
 }

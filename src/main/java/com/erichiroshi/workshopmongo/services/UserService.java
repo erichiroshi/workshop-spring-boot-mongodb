@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.erichiroshi.workshopmongo.domain.User;
-import com.erichiroshi.workshopmongo.domain.dto.UserDTO;
+import com.erichiroshi.workshopmongo.dto.UserDTO;
 import com.erichiroshi.workshopmongo.repositories.UserRepository;
 import com.erichiroshi.workshopmongo.services.exceptions.ObjectNotFoundException;
 
